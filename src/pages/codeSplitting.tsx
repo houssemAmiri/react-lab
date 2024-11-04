@@ -9,7 +9,7 @@ export default function CodeSplittingPage() {
     const [shouldRenderPost, setShouldRenderPost] = useState(false);
 
     const handleShow = () => {
-        import("../ui/codeSplitting/postByButton").then((module) => {
+        void import("../ui/codeSplitting/postByButton").then((module) => {
             setShow(() => module.default);
         });
     };
